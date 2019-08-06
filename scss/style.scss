@@ -1,0 +1,97 @@
+$primary: #3292a6;
+$primary-overlay: rgba(50, 146, 166, 0.8);
+
+body {
+    margin-top: 105px;
+}
+
+.navbar {
+    // shadow-lg
+    // box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    // shadow-lg with the shade of the primary color
+    box-shadow: 0 1rem 3rem rgba(50, 146, 166, 0.175) !important;
+    opacity: 0.9;
+    background: #fff;
+
+    .nav-item {
+        font-size: 1.25rem;
+        font-weight: 300;
+        padding-right: 1.4rem;
+    }
+}
+
+#showcase {
+    position: relative;
+    background: url('../img/mountains.jpg');
+    min-height: 600px;
+
+    .primary-overlay {
+        background: $primary-overlay;
+        position: absolute;
+        top: 0;
+        left : 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#about {
+    .info-header {
+        width: 50%;
+        margin:auto;
+        border-bottom: 1px #ddd solid;
+    }
+
+    #accordion {
+        cursor: pointer;
+    }
+}
+
+#authors {
+    .info-header {
+        width: 50%;
+        margin:auto;
+        border-bottom: 1px #ddd solid;
+    }
+
+    img {
+        margin-top: -50px;
+    }
+
+    .card {
+        // box-shadow: 0 1rem 3rem rgba(50, 146, 166, 0.175) !important;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    }
+
+    .card:hover {
+        background: $primary;
+        color: #fff;
+        
+    }
+
+    .fab {
+        color: #fff;
+    }
+
+
+}
+
+
+
+//this was created instead of compromising btn-primary in the _variables.scss
+// #newsletter {
+//     button {
+//         background-color: $primary !important;
+//         color: white;
+//     }
+// }
+
+@media(max-width: 768px) {
+    #showcase {
+        min-height: 500px;
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
